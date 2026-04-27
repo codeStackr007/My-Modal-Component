@@ -37,8 +37,8 @@ for (let i = 0; i < btnsOpenModal.length; i++) {
   btnsOpenModal[i].addEventListener("click", function () {
     // DATA GRAB: I pull the specific 'title' and 'text' from the
     // HTML data-attributes of the button that was actually clicked.
-    const titleFromHTML = btnsOpenModal[i].dataset.title;
-    const textFromHTML = btnsOpenModal[i].dataset.text;
+    const titleFromHTML = btnsOpenModal[i].dataset.title; // reads data-title="About Me"
+    const textFromHTML = btnsOpenModal[i].dataset.text; // reads data-text="I am a dedicated..."
 
     // INJECTION: I take the grabbed data and put it into the modal tags.
     modalTitle.textContent = titleFromHTML;
