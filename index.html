@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Modal Component</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <button
+        class="btn btn--show-modal"
+        data-title="About Me"
+        data-text="I am a dedicated Frontend Developer focused on building clean, functional applications. I specialize in the core web stack—HTML5, CSS3, and JavaScript—and I am passionate about writing efficient code."
+      >
+        About Me
+      </button>
+
+      <button
+        class="btn btn--show-modal"
+        data-title="Technical Hobbies & Interests"
+        data-text="Outside of core development, I enjoy exploring UI/UX design principles and modern CSS techniques. I have a deep appreciation for the arts, specifically Classical music and Opera, and I enjoy analyzing cinematography in movies. I am also active on X, documenting my progress."
+      >
+        My Hobbies
+      </button>
+
+      <button
+        class="btn btn--show-modal"
+        data-title="Core Philosophy"
+        data-text="<b><i>'The less you complain, the more you’ll obtain.' — John Mason.</i></b><br><br>This quote defines my  work ethic. I believe that a solution-oriented mindset is the most effective way to achieve results."
+      >
+        My Philosophy
+      </button>
+    </main>
+
+    <div class="overlay hidden"></div>
+
+    <div class="modal hidden">
+      <button class="modal__btn-close">&times;</button>
+      <h1 class="modal__title"></h1>
+      <p class="modal__text"></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

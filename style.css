@@ -1,0 +1,107 @@
+/* --- RESET --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; /* 10px = 1rem */
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #333;
+  background: linear-gradient(to top left, #28b487, #7dd56f);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- BUTTONS --- */
+.btn {
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 1.5rem 3rem;
+  margin: 1rem;
+  border: none;
+  border-radius: 50px;
+  background-color: white;
+  color: #444;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  outline: none;
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+}
+
+/* --- MODAL BLOCK (BEM) --- */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the modal */
+  width: 90%;
+  max-width: 55rem;
+  background-color: white;
+  padding: 5rem 6rem;
+  border-radius: 12px;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  z-index: 100;
+
+  /* Smooth Fade & Slide Transition */
+  transition: all 0.5s ease-out;
+}
+
+.modal__btn-close {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  font-size: 4rem;
+  color: #777;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.modal__title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+.modal__text {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* --- OVERLAY BLOCK --- */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  z-index: 50;
+}
+
+/* --- THE ANIMATION HELPER --- */
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  /* Extra effect: Modal slides up slightly when hiding */
+  transform: translate(-50%, -45%);
+}
