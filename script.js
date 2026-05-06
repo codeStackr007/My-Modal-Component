@@ -56,8 +56,8 @@ for (let i = 0; i < btnsOpenModal.length; i++) {
 // 4. CLOSING LISTENERS
 // I hook up the close button (the “X”) and the overlay itself to closeModal.
 // That way, clicking either of them will hide the modal.
-btnCloseModal.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
+btnCloseModal.addEventListener("click", closeModal);
 
 // 5. GLOBAL KEYBOARD LISTENER
 // I add a global listener on the whole document for keydown events.
